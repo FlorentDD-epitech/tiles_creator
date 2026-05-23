@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cq3fbr0ffcdui"]
+
+[ext_resource type="Script" uid="uid://badfnyqm2ljqr" path="res://scripts/game_scene.gd" id="1_onqr8"]
+[ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_w5aja"]
+
+[node name="Node2D" type="Node2D" unique_id=1235380909 node_paths=PackedStringArray("lane_nodes")]
+script = ExtResource("1_onqr8")
+lane_nodes = [NodePath("Spawn1"), NodePath("Spawn2"), NodePath("Spawn3"), NodePath("Spawn4")]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1145509042]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_w5aja")
+
+[node name="Spawn1" type="Node2D" parent="." unique_id=1615545077]
+position = Vector2(263, 0)
+
+[node name="Spawn2" type="Node2D" parent="." unique_id=1667318240]
+position = Vector2(472, 0)
+
+[node name="Spawn3" type="Node2D" parent="." unique_id=1009925309]
+position = Vector2(680, 0)
+
+[node name="Spawn4" type="Node2D" parent="." unique_id=1453223069]
+position = Vector2(889, 0)
