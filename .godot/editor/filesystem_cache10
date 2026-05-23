@@ -1,0 +1,12 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1779535550
+::res://assets/::1779535553
+bleu.png::CompressedTexture2D::1765720956769181703::1779535475::1779535553::1::::<><><>0<>0<>9583168754ea0a5d7b3761baea0b659d<>res://.godot/imported/bleu.png-01d3646e2db5327e9cb0e981a8c0c7c1.ctex::
+noir.png::CompressedTexture2D::7702468278006662629::1779535475::1779535553::1::::<><><>0<>0<>5cd7c2362cd428bdc3cc692b51987520<>res://.godot/imported/noir.png-39455206f4c565d4e600023ca7aead9e.ctex::
+::res://scenes/::1779535475
+game_scene.tscn::PackedScene::5953971745217135612::1779535475::0::1::::<><><>0<>0<><>::uid://badfnyqm2ljqr::::res://scripts/game_scene.gd<>uid://0flfwdwh2fql::::res://assets/bleu.png
+menu.tscn::PackedScene::289401968901300351::1779536009::0::1::::<><><>0<>0<><>::
+tile.tscn::PackedScene::3334295553933421002::1779535475::0::1::::<><><>0<>0<><>::uid://dh0er6o3oenfh::::res://assets/noir.png<>uid://ds6x1m6h87f1b::::res://scripts/tile.gd
+::res://scripts/::1779535475
+game_scene.gd::GDScript::2392941903098899933::1779535475::0::1::::<>Node2D<><>0<>0<><>::
+tile.gd::GDScript::8488100546947445177::1779535475::0::1::::<>Node2D<><>0<>0<><>::

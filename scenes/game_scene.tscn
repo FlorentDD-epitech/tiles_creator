@@ -3,23 +3,44 @@
 [ext_resource type="Script" uid="uid://badfnyqm2ljqr" path="res://scripts/game_scene.gd" id="1_onqr8"]
 [ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_w5aja"]
 
-[node name="Node2D" type="Node2D" unique_id=1235380909 node_paths=PackedStringArray("lane_nodes")]
+[node name="Node2D" type="Control" unique_id=613275439]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1145509042]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w5aja")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1346204562 node_paths=PackedStringArray("lane_nodes")]
+position = Vector2(0, -324)
 script = ExtResource("1_onqr8")
 lane_nodes = [NodePath("Spawn1"), NodePath("Spawn2"), NodePath("Spawn3"), NodePath("Spawn4")]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1145509042]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("1_w5aja")
+[node name="Spawn1" type="Node2D" parent="Node2D" unique_id=1615545077]
+position = Vector2(-100, 0)
 
-[node name="Spawn1" type="Node2D" parent="." unique_id=1615545077]
-position = Vector2(263, 0)
+[node name="Spawn2" type="Node2D" parent="Node2D" unique_id=1667318240]
+position = Vector2(-300, 0)
 
-[node name="Spawn2" type="Node2D" parent="." unique_id=1667318240]
-position = Vector2(472, 0)
+[node name="Spawn3" type="Node2D" parent="Node2D" unique_id=1009925309]
+position = Vector2(100, 0)
 
-[node name="Spawn3" type="Node2D" parent="." unique_id=1009925309]
-position = Vector2(680, 0)
-
-[node name="Spawn4" type="Node2D" parent="." unique_id=1453223069]
-position = Vector2(889, 0)
+[node name="Spawn4" type="Node2D" parent="Node2D" unique_id=1453223069]
+position = Vector2(300, 0)

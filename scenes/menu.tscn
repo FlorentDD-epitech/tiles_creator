@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://eegn420ys1t8"]
+
+[ext_resource type="Script" uid="uid://bkuekd1ddpd1o" path="res://scenes/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_yqeox"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vjb58"]
+font_size = 60
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control" unique_id=956678308]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjb58")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1167948238]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqeox")
+
+[node name="PlayButton" type="Button" parent="." unique_id=640433388]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PlayButton" unique_id=481764397]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -45.5
+offset_right = 68.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "PLAY"
+label_settings = SubResource("LabelSettings_vjb58")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+language = "FR_FR"

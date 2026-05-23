@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="tiles_creator"
-run/main_scene="uid://cq3fbr0ffcdui"
+run/main_scene="uid://eegn420ys1t8"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [dotnet]
