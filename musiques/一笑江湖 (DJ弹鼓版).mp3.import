@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csv162sqwb0jg"
+path="res://.godot/imported/一笑江湖 (DJ弹鼓版).mp3-857b29f6bf30f640644978bf8adbf06a.mp3str"
+
+[deps]
+
+source_file="res://musiques/一笑江湖 (DJ弹鼓版).mp3"
+dest_files=["res://.godot/imported/一笑江湖 (DJ弹鼓版).mp3-857b29f6bf30f640644978bf8adbf06a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

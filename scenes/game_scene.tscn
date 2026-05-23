@@ -34,13 +34,18 @@ script = ExtResource("1_onqr8")
 lane_nodes = [NodePath("Spawn1"), NodePath("Spawn2"), NodePath("Spawn3"), NodePath("Spawn4")]
 
 [node name="Spawn1" type="Node2D" parent="Node2D" unique_id=1615545077]
-position = Vector2(-100, 0)
+position = Vector2(-300, 0)
 
 [node name="Spawn2" type="Node2D" parent="Node2D" unique_id=1667318240]
-position = Vector2(-300, 0)
+position = Vector2(-100, 0)
 
 [node name="Spawn3" type="Node2D" parent="Node2D" unique_id=1009925309]
 position = Vector2(100, 0)
 
 [node name="Spawn4" type="Node2D" parent="Node2D" unique_id=1453223069]
 position = Vector2(300, 0)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=165446130]
+points = PackedVector2Array(666, 163, -616, 163)
+width = 2.0
+default_color = Color(0, 0, 0, 1)

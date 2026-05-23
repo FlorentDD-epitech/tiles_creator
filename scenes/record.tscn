@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cn7cpv0p6jhxo"]
+
+[ext_resource type="Script" uid="uid://decry72f7f0ct" path="res://scripts/record.gd" id="1_akj7i"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_akj7i"]
+load_path = "res://.godot/imported/bleu.png-01d3646e2db5327e9cb0e981a8c0c7c1.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_akj7i"]
+font_size = 60
+outline_size = 30
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Record" type="Control" unique_id=303922428]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_akj7i")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2092479506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -324.0
+offset_right = 575.5
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_akj7i")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1263489373]
+
+[node name="Label" type="Label" parent="." unique_id=1945277479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_akj7i")

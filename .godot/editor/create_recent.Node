@@ -1,4 +1,11 @@
+ItemList
+Label
+AudioStreamPlayer
+AudioListener2D
+AudioStreamPlayer2D
+TextureRect
+FileDialog
+Line2D
 Node2D
 Control
 Button
-Label

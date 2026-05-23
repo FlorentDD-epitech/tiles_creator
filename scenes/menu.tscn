@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://eegn420ys1t8"]
 
-[ext_resource type="Script" uid="uid://bkuekd1ddpd1o" path="res://scenes/menu.gd" id="1_vjb58"]
+[ext_resource type="Script" uid="uid://bkuekd1ddpd1o" path="res://scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_yqeox"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vjb58"]
@@ -42,9 +42,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -50.0
+offset_top = -150.0
 offset_right = 100.0
-offset_bottom = 50.0
+offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -68,3 +68,42 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 language = "FR_FR"
+
+[node name="RecordButton" type="Button" parent="." unique_id=589952311]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -150.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="RecordButton" unique_id=429684234]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -45.5
+offset_right = 68.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "RECORD"
+label_settings = SubResource("LabelSettings_vjb58")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+language = "FR_FR"
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=502693065]
+oversampling_override = 1.0
+title = "Open a File"
+ok_button_text = "Record"
+file_mode = 0
+filters = PackedStringArray("*.mp3")
+use_native_dialog = true
