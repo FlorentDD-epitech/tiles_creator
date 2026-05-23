@@ -25,7 +25,7 @@ func start_record():
 	await  get_tree().create_timer(1).timeout
 	label.text = "1"
 	await  get_tree().create_timer(1).timeout
-	label.text = "RECORD"
+	label.text = "RECORDING"
 	recording = true
 	stream_player.play()
 
@@ -56,7 +56,13 @@ func _input(event: InputEvent) -> void:
 		tile_list.append(new_note)
 
 func save_json():
-	var json_data = JSON.stringify(tile_list, "\t")
+	var json_prefix = {
+		"background-texture" : "res://assets/bleu.png",
+		"tile-texture" : "res://assets/noir.png",
+		"music-path" : GlobalData.selected_music,
+		"data" : tile_list
+	}
+	var json_data = JSON.stringify(json_prefix, "\t")
 	var file_path = "res://sounds_data/" + GlobalData.selected_music.get_basename().get_file() + ".json"
 	var file = FileAccess.open(file_path, FileAccess.WRITE)
 	if file:

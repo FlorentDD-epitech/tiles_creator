@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://badfnyqm2ljqr" path="res://scripts/game_scene.gd" id="1_onqr8"]
 [ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_w5aja"]
 
-[node name="Node2D" type="Control" unique_id=613275439]
+[node name="Control" type="Control" unique_id=613275439 node_paths=PackedStringArray("lane_nodes")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -12,6 +12,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_onqr8")
+lane_nodes = [NodePath("Node2D/Spawn1"), NodePath("Node2D/Spawn2"), NodePath("Node2D/Spawn3"), NodePath("Node2D/Spawn4")]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1145509042]
 layout_mode = 1
@@ -28,10 +30,8 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_w5aja")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1346204562 node_paths=PackedStringArray("lane_nodes")]
+[node name="Node2D" type="Node2D" parent="." unique_id=1346204562]
 position = Vector2(0, -324)
-script = ExtResource("1_onqr8")
-lane_nodes = [NodePath("Spawn1"), NodePath("Spawn2"), NodePath("Spawn3"), NodePath("Spawn4")]
 
 [node name="Spawn1" type="Node2D" parent="Node2D" unique_id=1615545077]
 position = Vector2(-300, 0)
@@ -49,3 +49,5 @@ position = Vector2(300, 0)
 points = PackedVector2Array(666, 163, -616, 163)
 width = 2.0
 default_color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=729996532]
