@@ -8,14 +8,27 @@ var list_path: Array = []
 func _ready() -> void:
 	itemL_list.item_activated.connect(choose_music)
 	check_directory()
+	_add_back_button()
+
+func _add_back_button() -> void:
+	var btn = Button.new()
+	btn.text = "← Retour"
+	btn.add_theme_font_size_override("font_size", 20)
+	btn.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
+	btn.offset_top = -60
+	btn.offset_bottom = -10
+	btn.offset_left = 10
+	btn.offset_right = 140
+	btn.pressed.connect(func():
+		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	)
+	add_child(btn)
 
 func check_directory():
 	var dir = DirAccess.open(data_directory)
-	
 	if dir:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
-		
 		while file_name != "":
 			if !dir.current_is_dir() and file_name.ends_with(".json"):
 				var path = data_directory + "/" + file_name
