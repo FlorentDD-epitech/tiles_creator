@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cn7cpv0p6jhxo"]
+[gd_scene load_steps=5 format=3 uid="uid://cn7cpv0p6jhxo"]
 
 [ext_resource type="Script" uid="uid://decry72f7f0ct" path="res://scripts/record.gd" id="1_akj7i"]
+[ext_resource type="Texture2D" uid="uid://b3ljiij5m66up" path="res://assets/bg.png" id="2_r8o5k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_akj7i"]
 load_path = "res://.godot/imported/bleu.png-01d3646e2db5327e9cb0e981a8c0c7c1.ctex"
@@ -10,7 +11,7 @@ font_size = 60
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Record" type="Control" unique_id=303922428]
+[node name="Record" type="Control"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -21,7 +22,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_akj7i")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2092479506]
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,9 +38,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CompressedTexture2D_akj7i")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1263489373]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
-[node name="Label" type="Label" parent="." unique_id=1945277479]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,3 +54,9 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_akj7i")
+
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 40)
+scale = Vector2(0.561523, 0.354492)
+texture = ExtResource("2_r8o5k")

@@ -1,4 +1,5 @@
+res://scenes/menu.tscn
 res://scenes/game_scene.tscn
-res://scripts/game_scene.gd
-res://scripts/record.gd
-res://scripts/tile.gd
+res://scenes/tile.tscn
+res://scenes/record.tscn
+res://scenes/choose.tscn

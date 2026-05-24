@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cq3fbr0ffcdui"]
+[gd_scene load_steps=4 format=3 uid="uid://cq3fbr0ffcdui"]
 
 [ext_resource type="Script" uid="uid://badfnyqm2ljqr" path="res://scripts/game_scene.gd" id="1_onqr8"]
 [ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_w5aja"]
+[ext_resource type="Texture2D" uid="uid://b3ljiij5m66up" path="res://assets/bg.png" id="2_ycayy"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("lane_nodes")]
 layout_mode = 3
@@ -15,7 +16,14 @@ grow_vertical = 2
 script = ExtResource("1_onqr8")
 lane_nodes = [NodePath("Node2D/Spawn1"), NodePath("Node2D/Spawn2"), NodePath("Node2D/Spawn3"), NodePath("Node2D/Spawn4")]
 
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1.00006, 46.5)
+scale = Vector2(0.561523, 0.361816)
+texture = ExtResource("2_ycayy")
+
 [node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
