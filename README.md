@@ -204,3 +204,15 @@ Si tu veux créer un JSON à la main sans passer par l'écran Record, place-le d
 - Le `Control` racine de `game_scene` est **ancré au centre** de l'écran. Son origine locale `(0, 0)` correspond au centre de la fenêtre. Le coin haut-gauche est à `(-576, -324)`.
 - Les tiles sont enfants du `Node2D` (positionné à `y = -324`). Leur `position` est locale à ce Node2D. La comparaison de mort utilise `global_position` pour être indépendante du système de coordonnées parent.
 - Les boutons du Game Over ont `process_mode = PROCESS_MODE_ALWAYS` pour rester cliquables même quand `get_tree().paused = true`.
+
+---
+
+## 🧾 Crédits
+
+Projet réalisé dans le cadre d’un prototype / game jam.
+Fait par :
+
+Gabriel Decloquement | gabriel.decloquement@epitech.eu
+Florent Dujardin--Duribreux | florent.dujardin-duribreux@epitech.eu
+Clement Dujardin--Duribreux | clement.dujardin-duribreux@epitech.eu
+Pierre Leclercq | pierre-leclercq@epitech.eu
