@@ -1,5 +1,9 @@
-res://scenes/menu.tscn
 res://scenes/game_scene.tscn
+res://scripts/game_scene.gd
+res://scripts/record.gd
+res://scripts/tile.gd
+res://scripts/global_data.gd
+res://scripts/result.gd
+res://scenes/result.tscn
+res://scripts/choose.gd
 res://scenes/tile.tscn
-res://scenes/record.tscn
-res://scenes/choose.tscn
