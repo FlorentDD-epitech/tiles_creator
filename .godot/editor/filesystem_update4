@@ -1,9 +1,17 @@
+res://scenes/menu.tscn
 res://scenes/game_scene.tscn
-res://scripts/game_scene.gd
-res://scripts/record.gd
-res://scripts/tile.gd
+res://scenes/menu.gd
+res://scripts/menu.gd
 res://scripts/global_data.gd
-res://scripts/result.gd
-res://scenes/result.tscn
-res://scripts/choose.gd
+res://scenes/record.tscn
+res://scripts/record.gd
+res://scripts/game_scene.gd
+res://sounds_data/M2LT.json
+res://scripts/tile.gd
+res://scenes/choose.tscn
+res://scenes/choose.gd
 res://scenes/tile.tscn
+res://scripts/choose.gd
+res://sounds_data/Vision.json
+res://sounds_data/C418 - Sweden.json
+res://sounds_data/Ziak - Galerie.json

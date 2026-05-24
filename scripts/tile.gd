@@ -4,6 +4,7 @@ signal tile_missed
 signal tile_hit(distance: float)
 
 @onready var button = $Button
+@onready var texture = $Button/TextureRect
 
 const TILE_HALF_HEIGHT = 50.0
 
@@ -11,6 +12,7 @@ var death_line_global_y: float = 487.0
 var speed: float = 1.0
 
 func _ready() -> void:
+	texture.texture = load(GlobalData.selected_tile_texture)
 	button.pressed.connect(clicked)
 
 func _process(delta: float) -> void:

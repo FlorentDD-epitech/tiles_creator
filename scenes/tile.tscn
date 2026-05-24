@@ -1,13 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnrfmi5ck1bxi"]
+[gd_scene format=3 uid="uid://bnrfmi5ck1bxi"]
 
 [ext_resource type="Texture2D" uid="uid://dh0er6o3oenfh" path="res://assets/noir.png" id="1_3dk36"]
 [ext_resource type="Script" uid="uid://ds6x1m6h87f1b" path="res://scripts/tile.gd" id="1_ywnoi"]
-[ext_resource type="Texture2D" uid="uid://dtcsb5d7n5qeh" path="res://assets/tile.png" id="3_jy7pm"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=351488550]
 script = ExtResource("1_ywnoi")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1427088013]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,7 +19,7 @@ offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Button"]
+[node name="TextureRect" type="TextureRect" parent="Button" unique_id=6145155]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -35,8 +34,4 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3dk36")
-
-[node name="Tile" type="Sprite2D" parent="."]
-position = Vector2(0.999999, 1.43051e-06)
-scale = Vector2(0.102307, 0.100806)
-texture = ExtResource("3_jy7pm")
+expand_mode = 1

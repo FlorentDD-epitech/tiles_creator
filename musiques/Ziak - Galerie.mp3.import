@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diw63jmxg6mch"
+path="res://.godot/imported/Ziak - Galerie.mp3-68b9512507925019ca63ce320c001f81.mp3str"
+
+[deps]
+
+source_file="res://musiques/Ziak - Galerie.mp3"
+dest_files=["res://.godot/imported/Ziak - Galerie.mp3-68b9512507925019ca63ce320c001f81.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

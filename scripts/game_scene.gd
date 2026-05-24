@@ -3,6 +3,7 @@ extends Control
 @onready var stream_player = $AudioStreamPlayer
 @onready var node2d = $Node2D
 @onready var death_line = $Line2D
+@onready var background = $TextureRect
 
 @export var lane_nodes: Array[Node2D] = []
 
@@ -52,6 +53,9 @@ func _ready() -> void:
 		init_music()
 	if json_data == null:
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	var bg_texture = load(json_data.get("background-texture", "res://assets/bg.png"))
+	background.texture = bg_texture
+	GlobalData.selected_tile_texture = json_data.get("tile-texture", "res://assets/tile.png")
 	update_hearts()
 
 func _build_ui() -> void:

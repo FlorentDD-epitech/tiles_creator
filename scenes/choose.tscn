@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxnyh2oggu7c4"]
+[gd_scene format=3 uid="uid://bxnyh2oggu7c4"]
 
 [ext_resource type="Script" uid="uid://csavdv2og32s3" path="res://scripts/choose.gd" id="1_8byd5"]
-[ext_resource type="Texture2D" uid="uid://0flfwdwh2fql" path="res://assets/bleu.png" id="1_bew2g"]
 [ext_resource type="Texture2D" uid="uid://b3ljiij5m66up" path="res://assets/bg.png" id="2_8vym7"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1481112919]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -15,13 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8byd5")
 
-[node name="Bg" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-6.10352e-05, 43.5)
-scale = Vector2(0.561523, 0.358887)
-texture = ExtResource("2_8vym7")
-
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=47582211]
 z_index = -2
 layout_mode = 1
 anchors_preset = 8
@@ -35,9 +28,10 @@ offset_right = 576.0
 offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_bew2g")
+texture = ExtResource("2_8vym7")
+expand_mode = 1
 
-[node name="ItemList" type="ItemList" parent="."]
+[node name="ItemList" type="ItemList" parent="." unique_id=1900817445]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

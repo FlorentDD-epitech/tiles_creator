@@ -11,3 +11,5 @@ var result_bad: int = 0
 var result_missed: int = 0
 var result_accuracy: float = 0.0
 var result_song_name: String = ""
+
+var selected_tile_texture: String = ""
