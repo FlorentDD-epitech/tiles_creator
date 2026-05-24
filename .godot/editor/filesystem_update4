@@ -1,12 +1,4 @@
-res://scenes/menu.tscn
 res://scenes/game_scene.tscn
-res://scenes/menu.gd
-res://scripts/menu.gd
-res://scripts/global_data.gd
-res://scenes/record.tscn
-res://scripts/record.gd
 res://scripts/game_scene.gd
-res://sounds_data/M2LT.json
+res://scripts/record.gd
 res://scripts/tile.gd
-res://scenes/choose.tscn
-res://scenes/choose.gd
