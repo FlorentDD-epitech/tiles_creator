@@ -1,7 +1,7 @@
 extends Control
 
 @onready var stream_player = $AudioStreamPlayer
-@onready var label = $Label   # Label natif centré dans la scène (font 60px)
+@onready var label = $Label
 
 const HALF_W = 576.0
 const HALF_H = 324.0
@@ -12,7 +12,6 @@ var tile_list: Array = []
 var recording: bool = false
 var audio_bytes: PackedByteArray = []
 
-# UI créée par code
 var choice_container: Control
 var bpm_container: Control
 var bpm_input: LineEdit
@@ -33,12 +32,8 @@ func _ready() -> void:
 	_build_ui()
 	_show_choice()
 
-# ─────────────────────────────────────────────
-# Construction UI
-# ─────────────────────────────────────────────
 func _build_ui() -> void:
 
-	# ── Panneau choix de mode ──────────────────
 	choice_container = Control.new()
 	choice_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	choice_container.visible = false
@@ -77,7 +72,6 @@ func _build_ui() -> void:
 	manual_btn.pressed.connect(_start_manual_record)
 	choice_container.add_child(manual_btn)
 
-	# ── Panneau saisie BPM ────────────────────
 	bpm_container = Control.new()
 	bpm_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	bpm_container.visible = false
@@ -140,11 +134,8 @@ func _build_ui() -> void:
 	bpm_error_label.visible = false
 	bpm_container.add_child(bpm_error_label)
 
-# ─────────────────────────────────────────────
-# États
-# ─────────────────────────────────────────────
 func _show_choice() -> void:
-	label.visible = false        # cache le $Label natif
+	label.visible = false
 	choice_container.visible = true
 	bpm_container.visible    = false
 
@@ -172,9 +163,6 @@ func _do_countdown() -> void:
 	recording = true
 	stream_player.play()
 
-# ─────────────────────────────────────────────
-# Auto-map BPM
-# ─────────────────────────────────────────────
 func _generate_from_bpm() -> void:
 	var bpm = bpm_input.text.strip_edges().to_float()
 	if bpm <= 0:
@@ -217,9 +205,6 @@ func _generate_from_bpm() -> void:
 	await get_tree().create_timer(1.5).timeout
 	save_json()
 
-# ─────────────────────────────────────────────
-# Enregistrement manuel
-# ─────────────────────────────────────────────
 func _input(event: InputEvent) -> void:
 	if !recording:
 		return

@@ -9,9 +9,6 @@ extends Control
 const TILE_SCENE = preload("res://scenes/tile.tscn")
 const TIME_TO_TRAVEL = 4
 
-# Le Control est centré, son origine locale = centre de l'écran
-# Résolution : 1152x648 → demi-tailles : 576 x 324
-# Node2D est à position.y = -324 (haut de l'écran en local)
 const HALF_W = 576.0
 const HALF_H = 324.0
 
@@ -44,10 +41,7 @@ func _ready() -> void:
 	update_hearts()
 
 func _build_ui() -> void:
-	# Le Control est ancré au centre → position (0,0) = centre écran
-	# Coin haut-gauche = (-576, -324), coin haut-droit = (576, -324)
 
-	# --- Cœurs : haut droit ---
 	for i in range(3):
 		var lbl = Label.new()
 		lbl.text = "❤"
@@ -58,7 +52,6 @@ func _build_ui() -> void:
 		add_child(lbl)
 		heart_labels.append(lbl)
 
-	# --- Compteur combo : haut gauche ---
 	combo_counter_label = Label.new()
 	combo_counter_label.add_theme_font_size_override("font_size", 32)
 	combo_counter_label.add_theme_color_override("font_color", Color(1, 0.85, 0.0))
@@ -67,23 +60,20 @@ func _build_ui() -> void:
 	combo_counter_label.visible = false
 	add_child(combo_counter_label)
 
-	# --- Popup combo : centré, au-dessus de la Line2D (ligne à y=163 local) ---
 	combo_label = Label.new()
 	combo_label.add_theme_font_size_override("font_size", 52)
 	combo_label.add_theme_color_override("font_color", Color(1, 0.75, 0.0))
 	combo_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	combo_label.custom_minimum_size = Vector2(400, 70)
-	combo_label.position = Vector2(-200, 60)   # juste au-dessus de la ligne (163)
+	combo_label.position = Vector2(-200, 60)
 	combo_label.z_index = 10
 	combo_label.visible = false
 	add_child(combo_label)
 
-	# --- Game Over panel ---
 	game_over_panel = Panel.new()
 	game_over_panel.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	game_over_panel.z_index = 20
 	game_over_panel.visible = false
-	# PROCESS_MODE_ALWAYS : répond aux clics même quand le tree est en pause
 	game_over_panel.process_mode = Node.PROCESS_MODE_ALWAYS
 	var style = StyleBoxFlat.new()
 	style.bg_color = Color(0, 0, 0, 0.78)
@@ -155,10 +145,8 @@ func _input(event: InputEvent) -> void:
 
 func spawn_tile(index: int):
 	var new_tile = TILE_SCENE.instantiate()
-	# Convertit la position globale du Spawn en locale du Node2D
 	var spawn_local = node2d.to_local(lane_nodes[index].global_position)
-	new_tile.position = Vector2(spawn_local.x, -50)  # spawn juste au-dessus du Node2D
-	# Passe la position globale RÉELLE de la ligne
+	new_tile.position = Vector2(spawn_local.x, -50)
 	new_tile.death_line_global_y = death_line.global_position.y + 163.0
 	new_tile.tile_missed.connect(_on_tile_missed)
 	new_tile.tile_hit.connect(_on_tile_hit)
@@ -174,8 +162,6 @@ func init_music():
 	else:
 		print("Invalid music path")
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
-
-# --- Vies ---
 
 func _on_tile_missed():
 	combo = 0
@@ -193,8 +179,6 @@ func game_over():
 	stream_player.stop()
 	game_over_panel.visible = true
 	get_tree().paused = true
-
-# --- Combo ---
 
 func _on_tile_hit():
 	combo += 1
